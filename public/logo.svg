@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <!-- Icône : fond carré arrondi bleu -->
+  <rect x="0" y="4" width="52" height="52" rx="14" fill="#0066CC"/>
+
+  <!-- Croix médicale blanche (fond) -->
+  <rect x="19" y="10" width="14" height="40" rx="4" fill="white" opacity="0.25"/>
+  <rect x="10" y="19" width="32" height="14" rx="4" fill="white" opacity="0.25"/>
+
+  <!-- Pilule stylisée blanche centrée -->
+  <!-- corps gauche (demi-cercle) -->
+  <path d="M16 30 C16 22.27 22.27 16 30 16 L30 44 C22.27 44 16 37.73 16 30Z" fill="white"/>
+  <!-- corps droit (demi-cercle) -->
+  <path d="M30 16 C37.73 16 44 22.27 44 30 C44 37.73 37.73 44 30 44 L30 16Z" fill="white" opacity="0.55"/>
+  <!-- séparateur central -->
+  <line x1="30" y1="16" x2="30" y2="44" stroke="#0066CC" stroke-width="2"/>
+
+  <!-- Texte : "Pharma" -->
+  <text x="64" y="39" font-family="'Arial', 'Helvetica', sans-serif" font-weight="700" font-size="26" fill="#111827" letter-spacing="-0.5">Pharma</text>
+
+  <!-- Texte : "Bot" en bleu -->
+  <text x="171" y="39" font-family="'Arial', 'Helvetica', sans-serif" font-weight="700" font-size="26" fill="#0066CC" letter-spacing="-0.5">Bot</text>
+</svg>

@@ -1,0 +1,166 @@
+// PharmaBot – Schéma Prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Pharmacie / Groupement ────────────────────────────────────────────────
+
+model Pharmacy {
+  id          String   @id @default(cuid())
+  name        String
+  groupName   String?
+  siret       String   @unique
+  address     String
+  city        String
+  postalCode  String
+  phone       String?
+  email       String   @unique
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  users         User[]
+  subscriptions Subscription[]
+  kiosks        Kiosk[]
+  interactions  Interaction[]
+}
+
+// ─── Utilisateurs (pharmaciens / admins) ──────────────────────────────────
+
+model User {
+  id         String   @id @default(cuid())
+  email      String   @unique
+  name       String
+  role       Role     @default(PHARMACIST)
+  pharmacyId String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  pharmacy Pharmacy @relation(fields: [pharmacyId], references: [id])
+}
+
+enum Role {
+  SUPER_ADMIN
+  PHARMACY_ADMIN
+  PHARMACIST
+}
+
+// ─── Abonnements SaaS ─────────────────────────────────────────────────────
+
+model Subscription {
+  id                 String             @id @default(cuid())
+  pharmacyId         String
+  plan               PlanType           @default(STANDARD)
+  status             SubscriptionStatus @default(ACTIVE)
+  priceMonthly       Float              @default(150)
+  stripeCustomerId   String?
+  stripeSubId        String?
+  currentPeriodStart DateTime
+  currentPeriodEnd   DateTime
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+
+  pharmacy Pharmacy  @relation(fields: [pharmacyId], references: [id])
+  invoices Invoice[]
+}
+
+enum PlanType {
+  STARTER   // 1 borne  – 99€/mois
+  STANDARD  // 1-3 bornes – 150€/mois
+  PREMIUM   // Bornes illimitées – 250€/mois
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  TRIAL
+  PAST_DUE
+  CANCELLED
+}
+
+// ─── Bornes (Kiosks) ──────────────────────────────────────────────────────
+
+model Kiosk {
+  id           String      @id @default(cuid())
+  serialNumber String      @unique
+  pharmacyId   String
+  location     String?     // ex: "Comptoir principal"
+  status       KioskStatus @default(ACTIVE)
+  lastPingAt   DateTime?
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  pharmacy     Pharmacy      @relation(fields: [pharmacyId], references: [id])
+  interactions Interaction[]
+}
+
+enum KioskStatus {
+  ACTIVE
+  INACTIVE
+  MAINTENANCE
+}
+
+// ─── Interactions (logs anonymisés) ───────────────────────────────────────
+
+model Interaction {
+  id           String        @id @default(cuid())
+  pharmacyId   String
+  kioskId      String?
+  sessionId    String        // UUID anonyme de session
+  category     QueryCategory
+  queryHash    String        // hash SHA-256 de la requête (jamais texte brut)
+  responseTime Int           // ms
+  satisfied    Boolean?      // feedback utilisateur (optionnel)
+  createdAt    DateTime      @default(now())
+
+  pharmacy Pharmacy @relation(fields: [pharmacyId], references: [id])
+  kiosk    Kiosk?   @relation(fields: [kioskId], references: [id])
+}
+
+enum QueryCategory {
+  DRUG_INTERACTION
+  CRUSHABLE_TABLET
+  GALENIC_FORM
+  PATIENT_NOTICE
+  OTHER
+}
+
+// ─── Factures ─────────────────────────────────────────────────────────────
+
+model Invoice {
+  id              String        @id @default(cuid())
+  subscriptionId  String
+  amount          Float
+  currency        String        @default("EUR")
+  status          InvoiceStatus @default(PENDING)
+  stripeInvoiceId String?
+  dueDate         DateTime
+  paidAt          DateTime?
+  createdAt       DateTime      @default(now())
+
+  subscription Subscription @relation(fields: [subscriptionId], references: [id])
+}
+
+enum InvoiceStatus {
+  PENDING
+  PAID
+  FAILED
+}
+
+// ─── Blog / Articles ──────────────────────────────────────────────────────
+
+model Article {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  title       String
+  excerpt     String
+  content     String
+  category    String    // ex: "Conformité", "Tutoriel", "Actualités"
+  published   Boolean   @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
