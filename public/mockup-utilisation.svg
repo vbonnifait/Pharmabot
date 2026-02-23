@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" font-family="Arial, Helvetica, sans-serif">
+
+  <!-- ===== BACKGROUND ===== -->
+  <rect width="960" height="420" fill="#F0F6FF"/>
+
+  <!-- Top header bar -->
+  <rect width="960" height="64" fill="#0066CC"/>
+
+  <!-- Header logo icon -->
+  <rect x="28" y="12" width="40" height="40" rx="10" fill="rgba(255,255,255,0.2)"/>
+  <path d="M37 32 C37 26.5 41.5 22 47 22 L47 42 C41.5 42 37 37.5 37 32Z" fill="white"/>
+  <path d="M47 22 C52.5 22 57 26.5 57 32 C57 37.5 52.5 42 47 42 L47 22Z" fill="white" opacity="0.55"/>
+  <line x1="47" y1="22" x2="47" y2="42" stroke="#0066CC" stroke-width="2"/>
+
+  <!-- Header title -->
+  <text x="76" y="37" font-size="22" font-weight="700" fill="white" letter-spacing="-0.5">Pharma</text>
+  <text x="148" y="37" font-size="22" font-weight="700" fill="#93C5FD" letter-spacing="-0.5">Bot</text>
+  <text x="194" y="37" font-size="14" fill="rgba(255,255,255,0.7)"> · Comment ça marche ?</text>
+
+  <!-- Price badge -->
+  <rect x="838" y="16" width="104" height="32" rx="16" fill="white"/>
+  <text x="853" y="37" font-size="14" font-weight="700" fill="#0066CC">150€ / mois</text>
+
+  <!-- ===== STEP ARROWS (connectors) ===== -->
+  <!-- Arrow 1->2 -->
+  <path d="M258 228 L282 228" stroke="#CBD5E1" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <polygon points="282,222 294,228 282,234" fill="#CBD5E1"/>
+
+  <!-- Arrow 2->3 -->
+  <path d="M488 228 L512 228" stroke="#CBD5E1" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <polygon points="512,222 524,228 512,234" fill="#CBD5E1"/>
+
+  <!-- Arrow 3->4 -->
+  <path d="M718 228 L742 228" stroke="#CBD5E1" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <polygon points="742,222 754,228 742,234" fill="#CBD5E1"/>
+
+  <!-- ===== STEP 1 : Approchez-vous ===== -->
+  <rect x="40" y="88" width="218" height="290" rx="16" fill="white" filter="url(#shadow)"/>
+  <!-- Step number badge -->
+  <circle cx="78" cy="110" r="16" fill="#0066CC"/>
+  <text x="78" y="116" font-size="14" font-weight="700" fill="white" text-anchor="middle">1</text>
+
+  <!-- Illustration: person walking to kiosk -->
+  <!-- Floor -->
+  <rect x="55" y="230" width="188" height="4" rx="2" fill="#E2E8F0"/>
+  <!-- Kiosk (small) -->
+  <rect x="178" y="160" width="44" height="72" rx="6" fill="#334155"/>
+  <rect x="182" y="163" width="36" height="54" rx="5" fill="#0066CC"/>
+  <rect x="184" y="165" width="32" height="48" rx="4" fill="#EEF4FF"/>
+  <rect x="184" y="165" width="32" height="12" rx="4" fill="#0066CC"/>
+  <text x="200" y="175" font-size="5" font-weight="700" fill="white" text-anchor="middle">Bot</text>
+  <rect x="193" y="180" width="14" height="3" rx="1.5" fill="#BFDBFE"/>
+  <rect x="193" y="186" width="22" height="3" rx="1.5" fill="#BFDBFE"/>
+  <rect x="193" y="192" width="18" height="3" rx="1.5" fill="#BFDBFE"/>
+  <rect x="193" y="198" width="14" height="3" rx="1.5" fill="#BFDBFE"/>
+  <!-- Pedestal -->
+  <rect x="193" y="230" width="14" height="4" rx="2" fill="#1E293B"/>
+  <!-- Person walking -->
+  <circle cx="110" cy="170" r="14" fill="#FDDBB4"/>
+  <path d="M96 167 C96 158 103 152 110 152 C117 152 124 158 124 167 C122 163 119 158 114 156 C109 154 103 156 99 160Z" fill="#2C1B0E"/>
+  <path d="M90 188 C90 188 94 180 102 178 L110 176 L118 178 C126 180 130 188 130 188 L134 226 L86 226Z" fill="#BFDBFE"/>
+  <path d="M90 194 C84 202 81 212 80 220 L87 222 C88 213 92 204 97 198Z" fill="#BFDBFE"/>
+  <path d="M130 196 C136 204 138 213 139 221 L132 222 C131 213 127 205 122 199Z" fill="#BFDBFE"/>
+  <rect x="100" y="224" width="20" height="2" rx="1" fill="#1E3A5F"/>
+  <!-- Arrow motion lines -->
+  <line x1="148" y1="190" x2="165" y2="190" stroke="#0066CC" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="165,186 172,190 165,194" fill="#0066CC"/>
+
+  <!-- Step title -->
+  <text x="149" y="264" font-size="14" font-weight="700" fill="#111827" text-anchor="middle">Approchez-vous</text>
+  <text x="149" y="283" font-size="11" fill="#6B7280" text-anchor="middle">du kiosque PharmaBot</text>
+  <text x="149" y="299" font-size="11" fill="#6B7280" text-anchor="middle">en pharmacie</text>
+
+  <!-- Divider -->
+  <rect x="60" y="316" width="178" height="1" fill="#E2E8F0"/>
+
+  <!-- Tag -->
+  <rect x="95" y="328" width="108" height="24" rx="12" fill="#EFF6FF"/>
+  <text x="149" y="344" font-size="10" fill="#0066CC" text-anchor="middle">Disponible 24h/7j</text>
+
+  <!-- ===== STEP 2 : Décrivez vos symptômes ===== -->
+  <rect x="300" y="88" width="218" height="290" rx="16" fill="white"/>
+  <!-- Step number badge -->
+  <circle cx="338" cy="110" r="16" fill="#0066CC"/>
+  <text x="338" y="116" font-size="14" font-weight="700" fill="white" text-anchor="middle">2</text>
+
+  <!-- Illustration: chat interface -->
+  <!-- Phone/tablet mockup -->
+  <rect x="350" y="140" width="118" height="88" rx="10" fill="#0F172A"/>
+  <rect x="354" y="144" width="110" height="78" rx="7" fill="#F8FAFF"/>
+  <!-- Tiny chat UI -->
+  <rect x="354" y="144" width="110" height="18" rx="7" fill="#0066CC"/>
+  <rect x="354" y="152" width="110" height="10" fill="#0066CC"/>
+  <text x="409" y="157" font-size="7" font-weight="700" fill="white" text-anchor="middle">PharmaBot</text>
+  <circle cx="457" cy="154" r="3" fill="#22C55E"/>
+  <!-- Chat bubbles small -->
+  <rect x="360" y="168" width="74" height="13" rx="5" fill="#EEF2FF"/>
+  <text x="365" y="178" font-size="6" fill="#374151">Bonjour ! Je vous écoute</text>
+  <rect x="386" y="186" width="70" height="11" rx="5" fill="#0066CC"/>
+  <text x="392" y="194" font-size="6" fill="white">J'ai mal à la gorge...</text>
+  <rect x="360" y="201" width="80" height="11" rx="5" fill="#EEF2FF"/>
+  <text x="366" y="209" font-size="6" fill="#374151">Depuis combien de temps ?</text>
+  <!-- Home indicator -->
+  <rect x="396" y="225" width="26" height="2" rx="1" fill="#334155"/>
+
+  <!-- Keyboard icon (typing) -->
+  <rect x="348" y="238" width="122" height="30" rx="6" fill="#F1F5F9"/>
+  <text x="409" y="251" font-size="8" fill="#94A3B8" text-anchor="middle">Décrivez vos symptômes...</text>
+  <rect x="451" y="241" width="16" height="14" rx="4" fill="#0066CC"/>
+  <text x="459" y="252" font-size="8" fill="white" text-anchor="middle">&#9658;</text>
+
+  <!-- Step title -->
+  <text x="409" y="293" font-size="14" font-weight="700" fill="#111827" text-anchor="middle">Décrivez vos</text>
+  <text x="409" y="312" font-size="14" font-weight="700" fill="#111827" text-anchor="middle">symptômes</text>
+  <text x="409" y="332" font-size="11" fill="#6B7280" text-anchor="middle">en langage naturel</text>
+
+  <rect x="320" y="349" width="178" height="1" fill="#E2E8F0"/>
+  <rect x="344" y="361" width="130" height="24" rx="12" fill="#EFF6FF"/>
+  <text x="409" y="377" font-size="10" fill="#0066CC" text-anchor="middle">Multilingue · Intuitif</text>
+
+  <!-- ===== STEP 3 : Recevez des recommandations ===== -->
+  <rect x="560" y="88" width="218" height="290" rx="16" fill="white"/>
+  <!-- Step number badge -->
+  <circle cx="598" cy="110" r="16" fill="#0066CC"/>
+  <text x="598" y="116" font-size="14" font-weight="700" fill="white" text-anchor="middle">3</text>
+
+  <!-- Illustration: recommendations card -->
+  <!-- Card -->
+  <rect x="574" y="138" width="190" height="104" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+  <!-- Card header -->
+  <rect x="574" y="138" width="190" height="28" rx="10" fill="#0066CC"/>
+  <rect x="574" y="152" width="190" height="14" fill="#0066CC"/>
+  <text x="669" y="157" font-size="9" font-weight="700" fill="white" text-anchor="middle">Recommandations PharmaBot</text>
+
+  <!-- Medicine items -->
+  <rect x="582" y="173" width="20" height="20" rx="4" fill="#1D4ED8"/>
+  <text x="592" y="186" font-size="8" fill="white" text-anchor="middle" font-weight="700">Rx</text>
+  <text x="608" y="182" font-size="9" font-weight="700" fill="#111827">Doliprane 1000mg</text>
+  <text x="608" y="193" font-size="8" fill="#6B7280">1 comprimé toutes les 6h</text>
+
+  <rect x="582" y="200" width="20" height="20" rx="4" fill="#059669"/>
+  <text x="592" y="213" font-size="7" fill="white" text-anchor="middle" font-weight="700">OTC</text>
+  <text x="608" y="209" font-size="9" font-weight="700" fill="#111827">Spray gorge Strepsils</text>
+  <text x="608" y="220" font-size="8" fill="#6B7280">3 fois par jour · 5 jours</text>
+
+  <rect x="582" y="227" width="20" height="8" rx="2" fill="#E2E8F0"/>
+  <rect x="608" y="227" width="100" height="8" rx="2" fill="#F1F5F9"/>
+  <text x="608" y="234" font-size="7" fill="#9CA3AF">+ 1 conseil supplémentaire...</text>
+
+  <!-- Warning badge -->
+  <rect x="574" y="250" width="190" height="24" rx="7" fill="#FEF9C3" stroke="#FDE047" stroke-width="1"/>
+  <text x="578" y="263" font-size="8.5" fill="#854D0E">&#9888; Consultez un médecin si les symptômes persistent</text>
+
+  <!-- Step title -->
+  <text x="669" y="295" font-size="14" font-weight="700" fill="#111827" text-anchor="middle">Recevez vos</text>
+  <text x="669" y="314" font-size="14" font-weight="700" fill="#111827" text-anchor="middle">recommandations</text>
+  <text x="669" y="333" font-size="11" fill="#6B7280" text-anchor="middle">personnalisées et sécurisées</text>
+
+  <rect x="580" y="349" width="178" height="1" fill="#E2E8F0"/>
+  <rect x="600" y="361" width="138" height="24" rx="12" fill="#EFF6FF"/>
+  <text x="669" y="377" font-size="10" fill="#0066CC" text-anchor="middle">Validé par des pharmaciens</text>
+
+  <!-- ===== STEP 4 : Consultez le pharmacien ===== -->
+  <rect x="820" y="88" width="112" height="290" rx="16" fill="#0055AA"/>
+  <!-- Step number badge -->
+  <circle cx="858" cy="110" r="16" fill="white"/>
+  <text x="858" y="116" font-size="14" font-weight="700" fill="#0066CC" text-anchor="middle">4</text>
+
+  <!-- Pharmacist illustration (simple) -->
+  <!-- Head -->
+  <circle cx="876" cy="162" r="16" fill="#FDDBB4"/>
+  <path d="M860 158 C860 149 868 143 876 143 C884 143 892 149 892 158 C892 153 889 146 883 143 C878 141 870 143 866 147Z" fill="#2C1B0E"/>
+  <!-- White coat -->
+  <path d="M858 180 C858 180 861 174 869 172 L876 170 L883 172 C891 174 894 180 894 180 L898 222 L854 222Z" fill="white"/>
+  <path d="M869 172 L876 184 L883 172" fill="none" stroke="#E2E8F0" stroke-width="1.5"/>
+  <!-- Stethoscope hint -->
+  <path d="M868 180 C864 185 862 190 864 196" stroke="#374151" stroke-width="2" fill="none"/>
+  <circle cx="864" cy="198" r="3" fill="#374151"/>
+  <!-- Pants -->
+  <path d="M862 220 L864 245 L872 245 L876 232 L880 245 L888 245 L890 220Z" fill="#1E3A5F"/>
+
+  <!-- RX badge -->
+  <rect x="846" y="255" width="60" height="22" rx="11" fill="white"/>
+  <text x="876" y="270" font-size="10" font-weight="700" fill="#0066CC" text-anchor="middle">Pharmacien</text>
+
+  <!-- Step title -->
+  <text x="876" y="302" font-size="11" font-weight="700" fill="white" text-anchor="middle">Si besoin,</text>
+  <text x="876" y="318" font-size="11" font-weight="700" fill="white" text-anchor="middle">consultez</text>
+  <text x="876" y="334" font-size="11" font-weight="700" fill="white" text-anchor="middle">directement</text>
+  <text x="876" y="350" font-size="11" font-weight="700" fill="#93C5FD" text-anchor="middle">votre pharmacien</text>
+
+  <rect x="836" y="366" width="80" height="24" rx="12" fill="rgba(255,255,255,0.15)"/>
+  <text x="876" y="382" font-size="9" fill="white" text-anchor="middle">En complément</text>
+
+  <!-- ===== DROP SHADOW FILTER ===== -->
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0066CC" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- ===== FOOTER ===== -->
+  <rect y="400" width="960" height="20" fill="#0055AA" opacity="0.12"/>
+  <text x="480" y="414" font-size="9" fill="#94A3B8" text-anchor="middle">PharmaBot · Votre assistant santé intelligent · 150€/mois · pharmabot.fr</text>
+
+</svg>
